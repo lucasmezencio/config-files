@@ -1,4 +1,4 @@
 config-files
 ============
 
-Just a way to organize my life =]
+Just a way to organise my life =]
