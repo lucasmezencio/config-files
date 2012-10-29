@@ -1,0 +1,58 @@
+// Settings in here override those in "Default/Preferences.sublime-settings", and
+// are overridden in turn by file type specific settings.
+{
+    "color_scheme" : "Packages/Color Scheme - Default/Monokai.tmTheme",
+
+    // Adobe Font for Developers
+    "font_face" : "Source Code Pro",
+    "font_size" : 11,
+
+    // Set to true to insert spaces when tab is pressed
+    "translate_tabs_to_spaces" : true,
+
+    // Trims white space added by auto_indent when moving the caret off the
+    // line.
+    "trim_automatic_white_space" : true,
+
+    // Disables horizontal scrolling if enabled.
+    // May be set to true, false, or "auto", where it will be disabled for
+    // source code, and otherwise enabled.
+    "word_wrap" : true,
+
+    // Set to true to draw a border around the visible rectangle on the minimap.
+    // The color of the border will be determined by the "minimapBorder" key in
+    // the color scheme
+    "draw_minimap_border" : true,
+
+    // If enabled, will highlight any line with a caret
+    "highlight_line" : true,
+
+    // Set to false to disable scrolling past the end of the buffer.
+    // On OS X, this value is overridden in the platform specific settings, so
+    // you'll need to place this line in your user settings to override it.
+    "scroll_past_end" : true,
+
+    // Set to "none" to turn off drawing white space, "selection" to draw only the
+    // white space within the selection, and "all" to draw all white space
+    "draw_white_space" : "all",
+
+    // Set to true to removing trailing white space on save
+    "trim_trailing_white_space_on_save" : true,
+
+    // Makes tabs with modified files more visible
+    "highlight_modified_tabs" : true,
+
+    // Phoenix Theme settings (http://netatoo.github.com/phoenix-theme/)
+    "theme"                         : "Phoenix Dark.sublime-theme",
+    "phoenix_color_green"           : true,
+    "phoenix_highlight_current_tab" : true,
+    "phoenix_blur_current_tab"      : true,
+    "phoenix_dirty_bottom_bar"      : true,
+    "phoenix_dirty_bottom_bar_red"  : true,
+    "phoenix_color_expanded_folder" : true,
+
+    // Just to know when to stop typing
+    "rulers" : [
+        120
+    ]
+}
