@@ -54,5 +54,6 @@
     // Just to know when to stop typing
     "rulers" : [
         120
-    ]
+    ],
+    "drag_text"                     : false
 }
