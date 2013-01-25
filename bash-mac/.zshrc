@@ -17,3 +17,8 @@ export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local
 
 # Showing all files (with indicators) and colouring them in list
 alias ll="ls -laFG"
+
+# Setting the default editor on shell for actions like 'svn propset/propget'
+editor=vim
+export EDITOR=$editor
+export VISUAL=$editor
