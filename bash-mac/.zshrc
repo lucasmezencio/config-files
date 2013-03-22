@@ -8,7 +8,7 @@ ZSH_THEME="af-magic"
 CASE_SENSITIVE="true"
 
 # Which plugins would you like to load?
-plugins=(git sublime Composer svn symfony2)
+plugins=(git sublime Composer svn symfony2 brew pip)
 
 source $ZSH/oh-my-zsh.sh
 
