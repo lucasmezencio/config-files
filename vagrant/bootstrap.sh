@@ -8,9 +8,11 @@ rm -rf /var/www
 ln -fs /vagrant /var/www
 
 DEFAULT_PATH=/etc/apache2/sites-available/default
+TMP_PATH=/tmp/default.conf
 
 if [[ ! -f $DEFAULT_PATH"_bkp" ]]; then
-    # cp $DEFAULT_PATH $DEFAULT_PATH"_bkp"
-    # cat $DEFAULT_PATH|sed 's/www/www\/public/g' > $DEFAULT_PATH
+    wget https://raw.github.com/lucasmezencio/config-files/master/vagrant/default.conf -O $TMP_PATH
+    cp $DEFAULT_PATH $DEFAULT_PATH"_bkp"
+    cat $TMP_PATH > $DEFAULT_PATH
     service apache2 restart
 fi
