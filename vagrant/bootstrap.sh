@@ -7,7 +7,7 @@ aptitude install -y vim apache2 curl php5 php5-curl php5-mysql php-apc php5-gd p
 rm -rf /var/www
 ln -fs /vagrant /var/www
 
-# DEFAULT_PATH=/etc/apache2/sites-available/default
+DEFAULT_PATH=/etc/apache2/sites-available/default
 
 if [[ ! -f $DEFAULT_PATH"_bkp" ]]; then
     # cp $DEFAULT_PATH $DEFAULT_PATH"_bkp"
