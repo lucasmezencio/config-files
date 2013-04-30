@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 aptitude update
 aptitude install -y vim apache2 curl php5 php5-curl php5-mysql php-apc php5-gd phpunit libapache2-mod-php5 php5-adodb php-pear
 # aptitude upgrade -y
