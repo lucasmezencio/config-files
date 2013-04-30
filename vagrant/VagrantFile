@@ -1,12 +1,9 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-require 'net/http'
-
 $script = <<SCRIPT
-  Net::HTTP.get_response(
-    URI.parse("https://raw.github.com/lucasmezencio/config-files/master/vagrant/bootstrap.sh")
-  ).body
+  result=$(wget -qO- https://raw.github.com/lucasmezencio/config-files/master/vagrant/bootstrap.sh)
+  $($result)
 SCRIPT
 
 Vagrant.configure("2") do |config|
