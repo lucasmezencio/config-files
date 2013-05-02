@@ -1,7 +1,7 @@
 How to use
 =====
 
-Run the following into project's directory:
+Simply run the following commands into project's directory:
 
 ``` bash
 wget http://bit.ly/VagrantFile
