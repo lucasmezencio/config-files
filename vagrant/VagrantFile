@@ -3,7 +3,7 @@
 
 $script = <<SCRIPT
   aptitude update
-  aptitude install curl
+  aptitude install -y curl
   curl http://bit.ly/VagrantBootstrap|sh
 SCRIPT
 
