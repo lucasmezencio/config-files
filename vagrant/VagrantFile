@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 $script = <<SCRIPT
-  wget https://raw.github.com/lucasmezencio/config-files/master/vagrant/bootstrap.sh
+  wget -N https://raw.github.com/lucasmezencio/config-files/master/vagrant/bootstrap.sh
   chmod +x bootstrap.sh
   ./bootstrap.sh
 SCRIPT
