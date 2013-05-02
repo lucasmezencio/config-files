@@ -1,6 +1,4 @@
-aptitude update
-aptitude install -y vim apache2 curl php5 php5-curl php5-mysql php-apc php5-gd phpunit libapache2-mod-php5 php5-adodb php-pear
-# aptitude upgrade -y
+aptitude install -y vim apache2 php5 php5-curl php5-mysql php-apc php5-gd phpunit libapache2-mod-php5 php5-adodb php-pear
 
 rm -rf /var/www
 ln -fs /vagrant /var/www
