@@ -13,5 +13,7 @@ if [[ ! -f $DEFAULT_PATH"_bkp" ]]; then
     wget https://raw.github.com/lucasmezencio/config-files/master/vagrant/default.conf -O $TMP_PATH
     cp $DEFAULT_PATH $DEFAULT_PATH"_bkp"
     cat $TMP_PATH > $DEFAULT_PATH
-    service apache2 restart
 fi
+
+a2enmod rewrite
+service apache2 restart
