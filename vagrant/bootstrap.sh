@@ -5,6 +5,7 @@ aptitude install -y curl vim apache2 php5 php5-curl php5-mysql php-apc php5-gd p
 
 rm -rf /var/www
 ln -fs /vagrant /var/www
+ln -fs /var/www www
 
 DEFAULT_PATH=/etc/apache2/sites-available/default
 TMP_PATH=/tmp/default.conf
