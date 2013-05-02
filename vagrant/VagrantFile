@@ -2,9 +2,9 @@
 # vi: set ft=ruby :
 
 $script = <<SCRIPT
-  aptitude update
-  aptitude install -y curl
-  curl https://raw.github.com/lucasmezencio/config-files/master/vagrant/bootstrap.sh|sh
+  wget https://raw.github.com/lucasmezencio/config-files/master/vagrant/bootstrap.sh
+  chmod +x bootstrap.sh
+  ./bootstrap.sh
 SCRIPT
 
 Vagrant.configure("2") do |config|
