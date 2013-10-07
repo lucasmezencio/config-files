@@ -8,12 +8,14 @@ ZSH_THEME="af-magic"
 CASE_SENSITIVE="true"
 
 # Which plugins would you like to load?
-plugins=(git sublime Composer svn symfony2 brew pip)
+plugins=(git sublime Composer svn symfony2 brew pip node npm)
 
 source $ZSH/oh-my-zsh.sh
 
+RUBY_BINDIR=`brew info ruby | grep /bin | tr -d ' '`
+
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/git/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/git/bin:$RUBY_BINDIR
 
 # Showing all files (with indicators) and colouring them in list
 alias ll="ls -laFG"
@@ -22,3 +24,5 @@ alias ll="ls -laFG"
 editor=vim
 export EDITOR=$editor
 export VISUAL=$editor
+
+unset DYLD_LIBRARY_PATH
