@@ -1,0 +1,13 @@
+[user]
+	name = Lucas Mezêncio
+	email = lucas.mezencio@gmail.com
+[gui]
+	recentrepo = /home/alucard/www/site
+[color]
+	ui = true
+[alias]
+	st = status -sb
+	ci = commit
+	co = checkout
+        pu = push
+        hist = log --all --graph --decorate --oneline --abbrev-commit
