@@ -26,6 +26,10 @@
 
     // If enabled, will highlight any line with a caret
     "highlight_line"                    : true,
+    
+    // Set to true to ensure the last line of the file ends in a newline
+    // character when saving
+    "ensure_newline_at_eof_on_save": true,
 
     // Set to false to disable scrolling past the end of the buffer.
     // On OS X, this value is overridden in the platform specific settings, so
