@@ -2,15 +2,15 @@
 	name = Lucas Mezêncio
 	email = lucas.mezencio@gmail.com
 [core]
-    excludesfile = /Users/alucard/.gitignore_global
+  excludesfile = /Users/alucard/.gitignore_global
 [gui]
 	recentrepo = /home/alucard/www/site
 [color]
 	ui = true
 [alias]
-    ci = commit
+  ci = commit
 	st = status -sb
 	br = branch
 	co = checkout
-        pu = push
-        hist = log --all --graph --decorate --oneline --abbrev-commit
+  pu = push
+  hist = log --all --graph --decorate --oneline --abbrev-commit
