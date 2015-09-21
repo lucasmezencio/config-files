@@ -3,8 +3,6 @@
   email = lucas.mezencio@gmail.com
 [core]
   excludesfile = /Users/alucard/.gitignore_global
-[gui]
-  recentrepo = /home/alucard/www/site
 [color]
   ui = true
 [alias]
