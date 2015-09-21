@@ -8,7 +8,5 @@
 [alias]
   ci = commit
   st = status -sb
-  br = branch
   co = checkout
-  pu = push
   hist = log --all --graph --decorate --oneline --abbrev-commit
