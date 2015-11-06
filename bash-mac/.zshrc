@@ -1,30 +1,28 @@
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+export ZSH=${HOME}/.oh-my-zsh
 
 # Set name of the theme to load.
-ZSH_THEME="af-magic"
+ZSH_THEME="af-magic-mine"
 
 # Set to this to use case-sensitive completion
 CASE_SENSITIVE="true"
 
 # Which plugins would you like to load?
-plugins=(git sublime composer svn symfony2 brew pip node npm git-flow ruby gem virtualenv laravel4)
+plugins=(adb bower brew brew-cask composer git git-flow gulp heroku laravel5 node npm pip ruby sublime symfony2 vagrant virtualenv)
 
-source $ZSH/oh-my-zsh.sh
-
-RUBY_BINDIR=`brew info ruby | grep /bin | tr -d ' '`
+source ${ZSH}/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/git/bin:$RUBY_BINDIR
-
-# Aliases
-alias ll="ls -laFG" # Showing all files (with indicators) and colouring them in list
-alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/git/bin
 
 # Setting the default editor on shell for actions like 'svn propset/propget'
 editor=vim
 export EDITOR=$editor
 export VISUAL=$editor
 
-unset DYLD_LIBRARY_PATH
+# Aliases
+alias zshconfig="${EDITOR} ~/.zshrc"
+alias ohmyzsh="${EDITOR} ~/.oh-my-zsh"
+alias envconfig="${EDITOR} ~/.env"
+
+. ${HOME}/.env
