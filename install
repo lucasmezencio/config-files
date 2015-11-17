@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+ln -si $PWD/.oh-my-zsh/themes/af-magic-mine.zsh-theme ~/.oh-my-zsh/themes/af-magic-mine.zsh-theme
+ln -si $PWD/.bash_aliases ~/.bash_aliases
+ln -si $PWD/.bash_profile ~/.bash_profile
+ln -si $PWD/.env ~/.env
+ln -si $PWD/.gitconfig ~/.gitconfig
+ln -si $PWD/.gitignore_global ~/.gitignore_global
+ln -si $PWD/.zshrc ~/.zshrc
