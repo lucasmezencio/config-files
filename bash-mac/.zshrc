@@ -9,6 +9,9 @@ CASE_SENSITIVE="true"
 
 # Which plugins would you like to load?
 plugins=(adb bower brew brew-cask composer git git-flow gulp heroku laravel5 node npm pip ruby sublime symfony2 vagrant virtualenv)
+plugins+=(zsh-completions)
+
+autoload -U compinit && compinit
 
 source ${ZSH}/oh-my-zsh.sh
 
