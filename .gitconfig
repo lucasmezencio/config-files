@@ -28,3 +28,9 @@
   co = checkout
   hist = log --all --graph --decorate --oneline --abbrev-commit
   dsf = "!f() { [ -z \"$GIT_PREFIX\" ] || cd \"$GIT_PREFIX\" && git diff --color \"$@\" | diff-so-fancy | less --tabs=4 -RFX; }; f"
+[git-up "fetch"]
+  all = true
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
