@@ -8,9 +8,9 @@ ZSH_THEME="af-magic-mine"
 CASE_SENSITIVE="true"
 
 # Which plugins would you like to load?
-plugins=(adb bower brew brew-cask composer git git-flow gulp heroku)
+plugins=(adb bower brew-cask composer git git-flow gulp heroku)
 plugins+=(laravel5 node npm pip ruby sublime symfony2 vagrant virtualenv)
-plugins+=(zsh-completions git-flow-completion)
+plugins+=(zsh-completions git-flow-completion docker)
 
 autoload -U compinit && compinit
 
@@ -34,6 +34,7 @@ export VISUAL=${EDITOR}
 export ANDROID_HOME=/usr/local/opt/android-sdk
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH="${PATH}:`yarn global bin`"
 
 # Aliases
 alias zshconfig="${EDITOR} ~/.zshrc"
@@ -46,6 +47,6 @@ eval "$(thefuck --alias)"
 
 . ${HOME}/.env
 
-export NVM_DIR="/Users/alucard/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export NVM_DIR="${HOME}/.nvm"
+. "$(brew --prefix nvm)/nvm.sh"
 
