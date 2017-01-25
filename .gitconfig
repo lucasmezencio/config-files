@@ -1,5 +1,5 @@
 [user]
-  name = Lucas Mezêncio
+  name = Lucas Mezêncio
   email = lucas.mezencio@gmail.com
 [core]
   excludesfile = /Users/alucard/.gitignore_global
@@ -20,13 +20,16 @@
   newHighlight = "green bold 22"
 [color "status"]
   added = green
-  changed = yellow
-  untracked = cyan
+  changed = cyan
+  untracked = red
 [alias]
   ci = commit
   st = status -sb
   co = checkout
+  ra = remote add
+  rv = remote -v
   hist = log --all --graph --decorate --oneline --abbrev-commit
+  cp = cherry-pick
   # this alias need to diff-so-fancy to be installed. be warned
   dsf = "!f() { [ -z \"$GIT_PREFIX\" ] || cd \"$GIT_PREFIX\" && git diff --color \"$@\" | diff-so-fancy | less --tabs=4 -RFX; }; f"
 [git-up "fetch"]
@@ -35,3 +38,23 @@
   clean = git-lfs clean %f
   smudge = git-lfs smudge %f
   required = true
+[diff]
+  tool = meld
+[difftool]
+  prompt = false
+[difftool "meld"]
+  trustExitCode = true
+  cmd = open -W -a Meld --args \"$LOCAL\" \"$PWD/$REMOTE\"
+[merge]
+  tool = meld
+[mergetool]
+  prompt = false
+[mergetool "meld"]
+  trustExitCode = true
+  cmd = open -W -a Meld --args --auto-merge \"$PWD/$LOCAL\" \"$PWD/$BASE\" \"$PWD/$REMOTE\" --output=\"$PWD/$MERGED\"
+[difftool "sourcetree"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
+[mergetool "sourcetree"]
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
