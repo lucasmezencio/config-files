@@ -28,10 +28,11 @@
   co = checkout
   ra = remote add
   rv = remote -v
-  hist = log --all --graph --decorate --oneline --abbrev-commit
   cp = cherry-pick
   # this alias need to diff-so-fancy to be installed. be warned
   dsf = "!f() { [ -z \"$GIT_PREFIX\" ] || cd \"$GIT_PREFIX\" && git diff --color \"$@\" | diff-so-fancy | less --tabs=4 -RFX; }; f"
+  hist = log --all --graph --decorate --oneline --abbrev-commit
+  blame-hist = log --all --graph --decorate --abbrev-commit --pretty=format:"%h%x09%an%x09%s"
 [git-up "fetch"]
   all = true
 [filter "lfs"]
