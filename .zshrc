@@ -10,7 +10,7 @@ CASE_SENSITIVE="true"
 # Which plugins would you like to load?
 plugins=(adb bower brew-cask composer git git-flow gulp heroku)
 plugins+=(laravel5 node npm pip ruby sublime symfony2 vagrant virtualenv)
-plugins+=(zsh-completions git-flow-completion docker)
+plugins+=(zsh-completions git-flow-completion docker zsh-nvm)
 
 autoload -U compinit && compinit
 
