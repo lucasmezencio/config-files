@@ -10,7 +10,7 @@ CASE_SENSITIVE="true"
 # Which plugins would you like to load?
 plugins=(adb bower brew-cask composer git git-flow gulp heroku)
 plugins+=(laravel5 node npm pip ruby sublime symfony2 vagrant virtualenv)
-plugins+=(zsh-completions git-flow-completion docker zsh-nvm)
+plugins+=(zsh-completions git-flow-completion docker zsh-nvm zsh-autosuggestions)
 
 autoload -U compinit && compinit
 
@@ -22,19 +22,22 @@ export GOPATH=${HOME}/projects/go/work
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 export PATH=${PATH}:/usr/local/git/bin
 export PATH=${PATH}:/usr/local/sbin
-export PATH=${PATH}:/Users/alucard/.composer/vendor/bin
+export PATH=${PATH}:~/.composer/vendor/bin
 export PATH=${PATH}:/usr/local/opt/go/libexec/bin
 export PATH=${PATH}:${GOPATH}/bin
+export PATH=${PATH}:~/.php-school/bin
 
 # Setting the default editor on shell for actions like 'svn propset/propget'
-export EDITOR=vim
+export EDITOR=nvim
 export VISUAL=${EDITOR}
 
 # Exports
-export ANDROID_HOME=/usr/local/opt/android-sdk
+export ANDROID_SDK_ROOT=/usr/local/share/android-sdk
+export ANDROID_HOME=${ANDROID_SDK_ROOT}
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH="${PATH}:`yarn global bin`"
+export VAGRANT_HOME=/Volumes/1TB/.vagrant.d
 
 # Aliases
 alias zshconfig="${EDITOR} ~/.zshrc"
@@ -50,3 +53,4 @@ eval "$(thefuck --alias)"
 export NVM_DIR="${HOME}/.nvm"
 . "$(brew --prefix nvm)/nvm.sh"
 
+cdpath=(~/projects)

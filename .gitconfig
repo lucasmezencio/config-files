@@ -1,8 +1,8 @@
 [user]
-  name = Lucas Mezêncio
-  email = lucas.mezencio@gmail.com
+	name = Lucas Mezêncio
+	email = lucas.mezencio@gmail.com
 [core]
-  excludesfile = /Users/alucard/.gitignore_global
+	excludesfile = /Users/alucard/.gitignore_global
 # so much color
 [color]
   ui = always
@@ -31,14 +31,17 @@
   cp = cherry-pick
   # this alias need to diff-so-fancy to be installed. be warned
   dsf = "!f() { [ -z \"$GIT_PREFIX\" ] || cd \"$GIT_PREFIX\" && git diff --color \"$@\" | diff-so-fancy | less --tabs=4 -RFX; }; f"
+  dsfc = "!f() { [ -z \"$GIT_PREFIX\" ] || cd \"$GIT_PREFIX\" && git diff --color \"$@\" | diff-so-fancy | less --tabs=4 -RFX; }; f --cached"
   hist = log --all --graph --decorate --oneline --abbrev-commit
   blame-hist = log --all --graph --decorate --abbrev-commit --pretty=format:"%h%x09%an%x09%s"
+  diff-log = log --left-right --cherry-pick --oneline --format="%s"
 [git-up "fetch"]
   all = true
 [filter "lfs"]
-  clean = git-lfs clean %f
-  smudge = git-lfs smudge %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
   required = true
+  clean = git-lfs clean -- %f
 [diff]
   tool = meld
 [difftool]
@@ -54,8 +57,13 @@
   trustExitCode = true
   cmd = open -W -a Meld --args --auto-merge \"$PWD/$LOCAL\" \"$PWD/$BASE\" \"$PWD/$REMOTE\" --output=\"$PWD/$MERGED\"
 [difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path =
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
 [mergetool "sourcetree"]
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-  trustExitCode = true
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+  template = /Users/alucard/.stCommitMsg
+[credential]
+	helper = !aws codecommit credential-helper $@
+	UseHttpPath = true
