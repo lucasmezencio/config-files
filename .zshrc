@@ -8,7 +8,7 @@ ZSH_THEME="af-magic-mine"
 CASE_SENSITIVE="true"
 
 # Which plugins would you like to load?
-plugins=(adb bower brew-cask composer git git-flow gulp heroku)
+plugins=(adb bower brew-cask composer git git-flow-avh gulp heroku)
 plugins+=(laravel5 node npm pip ruby sublime symfony2 vagrant virtualenv)
 plugins+=(zsh-completions git-flow-completion docker zsh-nvm zsh-autosuggestions)
 
@@ -38,15 +38,6 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH="${PATH}:`yarn global bin`"
 export VAGRANT_HOME=/Volumes/1TB/.vagrant.d
-
-# Aliases
-alias zshconfig="${EDITOR} ~/.zshrc"
-alias ohmyzsh="${EDITOR} ~/.oh-my-zsh"
-alias envconfig="${EDITOR} ~/.env"
-alias vg="vagrant"
-alias tailf="tail -f"
-
-eval "$(thefuck --alias)"
 
 . ${HOME}/.env
 
